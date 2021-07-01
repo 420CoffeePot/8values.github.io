@@ -53,9 +53,9 @@
     }
 
     function next_question(mult) {
-        appeal_array[qn] = mult*questions[qn].effect.econ
-        active_array[qn] = mult*questions[qn].effect.dipl
-        human_array[qn] = mult*questions[qn].effect.govt
+        appeal_array[qn]  = mult*questions[qn].effect.econ
+        active_array[qn]  = mult*questions[qn].effect.dipl
+        human_array[qn]   = mult*questions[qn].effect.govt
         protect_array[qn] = mult*questions[qn].effect.scty
         qn++;
         if (qn < questions.length) {
