@@ -34,10 +34,10 @@
     var qn = 0; // Question number
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_appeal  += Math.abs(questions[i].effect.econ)
-        max_active  += Math.abs(questions[i].effect.dipl)
-        max_human   += Math.abs(questions[i].effect.govt)
-        max_protect += Math.abs(questions[i].effect.scty)
+        max_appeal  += Math.abs(questions[i].effect.appeal)
+        max_active  += Math.abs(questions[i].effect.active)
+        max_human   += Math.abs(questions[i].effect.human)
+        max_protect += Math.abs(questions[i].effect.protect)
     }
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
@@ -53,10 +53,10 @@
     }
 
     function next_question(mult) {
-        appeal_array[qn]  = mult*questions[qn].effect.econ
-        active_array[qn]  = mult*questions[qn].effect.dipl
-        human_array[qn]   = mult*questions[qn].effect.govt
-        protect_array[qn] = mult*questions[qn].effect.scty
+        appeal_array[qn]  = mult*questions[qn].effect.appeal
+        active_array[qn]  = mult*questions[qn].effect.active
+        human_array[qn]   = mult*questions[qn].effect.human
+        protect_array[qn] = mult*questions[qn].effect.protect
         qn++;
         if (qn < questions.length) {
             init_question();
