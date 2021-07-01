@@ -27,16 +27,16 @@
 <script>
     var max_appeal, max_active, max_human, max_protect; // Max possible scores
     max_appeal = max_active = max_human = max_protect = 0;
-    let appeal_array = new Array(questions.length);
-    let active_array = new Array(questions.length);
-    let human_array = new Array(questions.length);
+    let appeal_array  = new Array(questions.length);
+    let active_array  = new Array(questions.length);
+    let human_array   = new Array(questions.length);
     let protect_array = new Array(questions.length);
     var qn = 0; // Question number
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_appeal += Math.abs(questions[i].effect.econ)
-        max_active += Math.abs(questions[i].effect.dipl)
-        max_human += Math.abs(questions[i].effect.govt)
+        max_appeal  += Math.abs(questions[i].effect.econ)
+        max_active  += Math.abs(questions[i].effect.dipl)
+        max_human   += Math.abs(questions[i].effect.govt)
         max_protect += Math.abs(questions[i].effect.scty)
     }
     function init_question() {
